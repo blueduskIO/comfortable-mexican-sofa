@@ -19,7 +19,7 @@ module ComfortableMexicanSofa::Content::Tag::Mixins
           variant = file.variant(combine_options: variant_attrs)
           url_helpers.rails_representation_path(variant, only_path: true)
         else
-          url_helpers.rails_blob_path(file, only_path: true)
+          file.service_url
         end
 
       case as
